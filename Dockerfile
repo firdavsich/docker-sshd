@@ -3,6 +3,9 @@ FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
 
+# Disable password login
+RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+
 # add ssh user
 RUN useradd sshuser -m -s /bin/bash
 

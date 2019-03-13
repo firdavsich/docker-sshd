@@ -1,7 +1,7 @@
 version: "2"
 services:
   sshd:
-    image: sshd
+    image: firdavsich/sshd
     ports:
       - "2222:22"
     volumes:
