@@ -5,6 +5,6 @@ services:
     ports:
       - "2222:22"
     volumes:
-      - ./authorized_keys:/root/.ssh/authorized_keys
+      - ./authorized_keys:/home/sshuser/.ssh/authorized_keys
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
