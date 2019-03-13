@@ -1,0 +1,10 @@
+version: "2"
+services:
+  sshd:
+    image: sshd
+    ports:
+      - "2222:22"
+    volumes:
+      - ./authorized_keys:/root/.ssh/authorized_keys
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
