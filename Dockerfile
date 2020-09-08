@@ -2,7 +2,7 @@ FROM alpine
 
 LABEL maintainer "Firdavs Murodov - https://github.com/firdavsich"
 
-RUN apk add --no-cache openssh 
+RUN apk add --no-cache openssh bash
 RUN mkdir /var/run/sshd
 
 # Disable password login
